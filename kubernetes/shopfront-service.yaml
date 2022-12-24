@@ -35,11 +35,8 @@ spec:
         ports:
         - containerPort: 8010
         livenessProbe:
-          httpGet:
-            path: /healthcheck
+         httpGet:
+            path: /health
             port: 8010
           initialDelaySeconds: 30
           timeoutSeconds: 1
-          initialDelaySeconds: 30
-          timeoutSeconds: 1
-
