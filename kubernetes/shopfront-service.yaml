@@ -30,26 +30,16 @@ spec:
         app: shopfront
     spec:
       containers:
-<<<<<<< HEAD
-        - name: shopfront
-          image: taniaduggal60/shopfront:latest
-          ports:
-            - containerPort: 8010
-          livenessProbe:
-            httpGet:
-              path: /health
-              port: 8010
-            initialDelaySeconds: 30
-            timeoutSeconds: 1
-=======
       - name: shopfront
         image: taniaduggal60/shopfront:latest
         ports:
         - containerPort: 8010
         livenessProbe:
           httpGet:
-            path: /health
+            path: /healthcheck
             port: 8010
           initialDelaySeconds: 30
           timeoutSeconds: 1
->>>>>>> 0a33241a7ef6870469dcde517a493fa33c2cf955
+          initialDelaySeconds: 30
+          timeoutSeconds: 1
+
