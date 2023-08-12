@@ -15,28 +15,3 @@ spec:
       name: http
 
 ---
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: productcatalogue
-spec:
-  selector:
-    matchLabels:
-      app: productcatalogue
-  replicas: 1
-  template:
-    metadata:
-      labels:
-        app: productcatalogue
-    spec:
-      containers:
-      - name: productcatalogue
-        image: taniaduggal60/productcatalogue1:latest
-        ports:
-        - containerPort: 8020
-        livenessProbe:
-          httpGet:
-            path: /healthcheck
-            port: 8025
-          initialDelaySeconds: 30
-          timeoutSeconds: 1
