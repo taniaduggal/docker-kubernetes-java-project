@@ -1,8 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: stockmanager
-  namespace: default
+ name: stockmanager
 spec:
   selector:
     matchLabels:
